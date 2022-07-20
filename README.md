@@ -9,7 +9,7 @@ This project regards extraction of textual data from TripAdvisor reviews and the
 
 [2. Web Scraping Process](https://github.com/vickypar/Analysis_of_TripAdvisor_Data#2-web-scraping-process)
 
-[3. Data Analysis](https://github.com/vickypar/Analysis_of_TripAdvisor_Data#3-data)
+[3. Data Analysis](https://github.com/vickypar/Analysis_of_TripAdvisor_Data#3-data-analysis)
 
 [4. Sentiment Analysis](https://github.com/vickypar/Analysis_of_TripAdvisor_Data#4-sentiment-analysis)
 
