@@ -47,16 +47,38 @@ The process followed to scrape the data is described below:
 - Collect the restaurant links
 - Collect the important elements of each review 
 
-![image](https://user-images.githubusercontent.com/95586847/180652283-ba69e0e6-3c01-49c2-81db-d2d46033b270.png)
-
-![image](https://user-images.githubusercontent.com/95586847/180652293-143ed578-2415-47ed-8fff-808f309675f5.png)
+  Review             |  Reviewer
+  :-------------------------:|:-------------------------:
+  ![image](https://user-images.githubusercontent.com/95586847/180652283-ba69e0e6-3c01-49c2-81db-d2d46033b270.png)  |  ![image](https://user-images.githubusercontent.com/95586847/180652293-143ed578-2415-47ed-8fff-808f309675f5.png)
 
 The whole scraping process took around 15 hours for 14373 reviews.
 
 ## 3. Data Analysis
 
 ### 3.1 Preprocessing 
-### 3.2 Monthly Reviews 
+- Drop unwanted columns
+- Process "Review" column
+  - Remove punctuation marks
+  - Lowercase
+  - Tokenize (split each review into words)
+  - Remove stopwords
+  - Stemming (produce morphological variants of a root word)
+- Process "Rating_Date" column
+  - Extract review's month 
+  - Extract review's year
+
+Final format:
+![image](https://user-images.githubusercontent.com/95586847/180653391-b4747f1d-81be-4308-8d02-c5ac59e003fc.png)
+
+### 3.2 Monthly Reviews
+Visualize the monthly number of reviews:
+
+<center><img src="https://user-images.githubusercontent.com/95586847/180653719-ea37a8a2-03c2-48cf-852a-a72c1dd39e2a.png" width="500"></center>
+
+The month with the most reviews made is August with September trailing right behind. This is due to the tourism Thessaloniki gets late at summer.
+Despite the peak observed during summer, September and October, we can see that the
+number of monthly reviews remains the same during the rest of the months.
+
 ### 3.3 Most Common Words, Bi-grams, Tri-grams
 ### 3.4 Fastest Growing and Fastest Shrinking Words
 ### 3.5 Topic Modeling 
