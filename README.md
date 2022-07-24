@@ -27,6 +27,32 @@ MSc Data and Web Science, School of Informatics, Aristotle University of Thessal
 
 ## 2. Web Scraping Process
 
+The information that we want to scrape from each restaurant review using Selenium with chromedriver is the following:
+- Username of the reviewer
+- Age of the reviewer
+- Gender of the reviewer
+- Location of the reviewer
+- Review distribution of the reviewer
+- Name of the business
+- Review date
+- Visit date of the reviewer
+- Title of the review
+- Text of the review
+- Rating of the review
+
+![image](https://user-images.githubusercontent.com/95586847/180650940-99ea59bc-c78c-481f-aed4-f7e588224148.png)
+
+The process followed to scrape the data is described below:
+- Find the way TripAdvisor is set up using F12
+- Collect the restaurant links
+- Collect the important elements of each review 
+
+![image](https://user-images.githubusercontent.com/95586847/180652283-ba69e0e6-3c01-49c2-81db-d2d46033b270.png)
+
+![image](https://user-images.githubusercontent.com/95586847/180652293-143ed578-2415-47ed-8fff-808f309675f5.png)
+
+The whole scraping process took around 15 hours for 14373 reviews.
+
 ## 3. Data Analysis
 
 ### 3.1 Preprocessing 
