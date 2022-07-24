@@ -80,6 +80,28 @@ Despite the peak observed during summer, September and October, we can see that 
 number of monthly reviews remains the same during the rest of the months.
 
 ### 3.3 Most Common Words, Bi-grams, Tri-grams
+The library "WordCloud" was used to visualize unigrams, bigrams and trigrams that occur frequently at 1-star and 5-star reviews.
+- Unigrams
+  1-star             |  5-star
+  :-------------------------:|:-------------------------:
+  ![image](https://user-images.githubusercontent.com/95586847/180654770-2e3d2e93-3cbd-434a-9526-45448c80112b.png) |  ![image](https://user-images.githubusercontent.com/95586847/180654828-091083c3-afd0-4b14-a175-e4198324fbbc.png)
+
+- Bigrams
+  1-star             |  5-star
+  :-------------------------:|:-------------------------:
+  ![image](https://user-images.githubusercontent.com/95586847/180654787-87f3e4c9-e06d-46c0-b405-0371010302d0.png)  |  ![image](https://user-images.githubusercontent.com/95586847/180654838-f1e737cc-96cf-4078-bcb9-74ac53c166b2.png)
+
+
+- Trigrams
+  1-star             |  5-star
+  :-------------------------:|:-------------------------:
+  ![image](https://user-images.githubusercontent.com/95586847/180654801-6c14bc94-01d9-44cf-aa1a-0da743b3d19f.png) |  ![image](https://user-images.githubusercontent.com/95586847/180654854-d6f4367a-6ed4-412d-985e-fb241caa2a47.png)
+
+
+It is obvious that the bigger the "n" gets, the better it describes the general feeling of a review.
+Unigrams are just common words, while some of the bigrams and most of the trigrams give a
+more complete view of the context. 
+
 ### 3.4 Fastest Growing and Fastest Shrinking Words
 ### 3.5 Topic Modeling 
 ### 3.6 Map of Locations
