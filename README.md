@@ -97,15 +97,29 @@ The library "WordCloud" was used to visualize unigrams, bigrams and trigrams tha
   :-------------------------:|:-------------------------:
   ![image](https://user-images.githubusercontent.com/95586847/180654801-6c14bc94-01d9-44cf-aa1a-0da743b3d19f.png) |  ![image](https://user-images.githubusercontent.com/95586847/180654854-d6f4367a-6ed4-412d-985e-fb241caa2a47.png)
 
-
 It is obvious that the bigger the "n" gets, the better it describes the general feeling of a review.
 Unigrams are just common words, while some of the bigrams and most of the trigrams give a
 more complete view of the context. 
 
 ### 3.4 Fastest Growing and Fastest Shrinking Words
-### 3.5 Topic Modeling 
-### 3.6 Map of Locations
+Another interesting visualization would be to explore the fastest growing and shrinking words
+across the time.
+For instance:
+"Vegan"            |  "Soutzoukakia"
+:-------------------------:|:-------------------------:
+![image](https://user-images.githubusercontent.com/95586847/180656507-006479a8-d13c-4b06-ae92-47894bdcbbf7.png) |  ![image](https://user-images.githubusercontent.com/95586847/180656524-9da3fc25-21f2-4542-bbf2-b7a4670cc424.png)
 
+### 3.5 Topic Modeling 
+We try to extract and visualize emerging topics from all the reviews across time using Latent Dirichlet Allocation (LDA) algorithm. We split the reviews in chronological order and find the four most representative topics.
+![image](https://user-images.githubusercontent.com/95586847/180656871-24bb1cd1-c18c-4c55-9c6d-58150495b3d8.png)
+
+### 3.6 Map of Locations
+We also visualize in a map the location of reviewers so that we can make insightful conclusions about the tourism in Thessaloniki.
+- Get the country given the city
+- Get the coordinates
+- Create the map
+
+![image](https://user-images.githubusercontent.com/95586847/180658666-73d14e7c-ff09-41d5-8ff9-a389f72c5baa.png)
 
 ## 4. Sentiment Analysis 
 
