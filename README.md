@@ -73,7 +73,7 @@ Final format:
 ### 3.2 Monthly Reviews
 Visualize the monthly number of reviews:
 
-<center><img src="https://user-images.githubusercontent.com/95586847/180653719-ea37a8a2-03c2-48cf-852a-a72c1dd39e2a.png" width="500"></center>
+<p align="center"><img src="https://user-images.githubusercontent.com/95586847/180653719-ea37a8a2-03c2-48cf-852a-a72c1dd39e2a.png" width="500"></p>
 
 The month with the most reviews made is August with September trailing right behind. This is due to the tourism Thessaloniki gets late at summer.
 Despite the peak observed during summer, September and October, we can see that the
@@ -109,9 +109,10 @@ For instance:
 :-------------------------:|:-------------------------:
 ![image](https://user-images.githubusercontent.com/95586847/180656507-006479a8-d13c-4b06-ae92-47894bdcbbf7.png) |  ![image](https://user-images.githubusercontent.com/95586847/180656524-9da3fc25-21f2-4542-bbf2-b7a4670cc424.png)
 
+
 ### 3.5 Topic Modeling 
 We try to extract and visualize emerging topics from all the reviews across time using Latent Dirichlet Allocation (LDA) algorithm. We split the reviews in chronological order and find the four most representative topics.
-![image](https://user-images.githubusercontent.com/95586847/180656871-24bb1cd1-c18c-4c55-9c6d-58150495b3d8.png)
+<p align="center"><img src="https://user-images.githubusercontent.com/95586847/180656871-24bb1cd1-c18c-4c55-9c6d-58150495b3d8.png" width="500" height="500"></p>
 
 ### 3.6 Map of Locations
 We also visualize in a map the location of reviewers so that we can make insightful conclusions about the tourism in Thessaloniki.
@@ -119,7 +120,7 @@ We also visualize in a map the location of reviewers so that we can make insight
 - Get the coordinates
 - Create the map
 
-![image](https://user-images.githubusercontent.com/95586847/180658666-73d14e7c-ff09-41d5-8ff9-a389f72c5baa.png)
+<p align="center"><img src="https://user-images.githubusercontent.com/95586847/180658666-73d14e7c-ff09-41d5-8ff9-a389f72c5baa.png" width="600" height="400"></p>
 
 ## 4. Sentiment Analysis 
 
