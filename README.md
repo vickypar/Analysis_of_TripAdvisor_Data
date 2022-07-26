@@ -123,8 +123,15 @@ We also visualize in a map the location of reviewers so that we can make insight
 <p align="center"><img src="https://user-images.githubusercontent.com/95586847/180658666-73d14e7c-ff09-41d5-8ff9-a389f72c5baa.png" width="600" height="400"></p>
 
 ## 4. Sentiment Analysis 
+We also extract the sentiment of the reviews using the "TextBlob" library.
 
 ### 4.1 Polarity Score
+TextBlob library was used to get the sentiment polarity score of the reviews and find those with the highest and lowest sentiment polarity scores. The polarity score is a float within the range [-1.0, 1.0], where values larger than zero mean positive sentiment. The top-5 positive and top-5 negative reviews are presented below:
+"Positive"            |  "Negative"
+:-------------------------:|:-------------------------:
+![image](https://user-images.githubusercontent.com/95586847/181086538-f1bfb344-51f5-43a2-96b4-1c2255988cc0.png) |  ![image](https://user-images.githubusercontent.com/95586847/181086421-b0ae3e4c-a915-4b1c-a67d-af15dfebd3fb.png)
+
+
 ### 4.2 Most Common Words in Positive and Negative Reviews 
 ### 4.3 Polarity Score per Restaurant 
 
