@@ -132,11 +132,34 @@ TextBlob library was used to get the sentiment polarity score of the reviews and
 ![image](https://user-images.githubusercontent.com/95586847/181086538-f1bfb344-51f5-43a2-96b4-1c2255988cc0.png) |  ![image](https://user-images.githubusercontent.com/95586847/181086421-b0ae3e4c-a915-4b1c-a67d-af15dfebd3fb.png)
 
 
-### 4.2 Most Common Words in Positive and Negative Reviews 
-### 4.3 Polarity Score per Restaurant 
+### 4.2 Polarity Score per Restaurant 
+We also calculate the polarity score for each restaurant based on its reviews in
+order to find the top-10 restaurants with positive and negative scores. Since these mean polarity scores may be misleading if a restaurant has very few reviews, we take into account only the restaurants that have more than 20 reviews.
+
+"Best Restaurants"            |  "Worst Restaurants"
+:-------------------------:|:-------------------------:
+![image](https://user-images.githubusercontent.com/95586847/183750652-a1476dd1-9473-4da4-ac78-aa962668441f.png) |  ![image](https://user-images.githubusercontent.com/95586847/183750670-74a331a1-fa26-4181-8612-a2bd0a7c5ab9.png)
 
 ## 5. User Profiling
+Next, we build Machine Learning models that predict the gender and the age
+group of the reviewer based on the review. More specifically, the features that will be used
+are the review text, the user review distribution, the rating and the polarity that was calculated
+in the previous section.
 
 ### 5.1 Gender
+The percentage of women and men for the reviewers that we have this information in the dataset are presented in the following pie chart. We have information about the reviewer's gender in about one third of our dataset.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/95586847/183751581-6b484d57-88a5-42f9-b658-c648cff18d2e.png" width="300"></p>
+
+We split our dataset into training and test set and we use a "Single Imputer" so as to complete the missing values using the mean along each column and a “ColumnTransformer” in order to convert each
+review to a vector of TF-IDF features. After that, in order to select the most appropriate classification algorithm, we further split the training data into training and validation sets. The results are presented below:
+
+<p align="center"><img src="https://user-images.githubusercontent.com/95586847/183754910-004f3aaa-31db-4179-a7dd-fdbda8757dff.png" width="300"></p>
+
+Since the largest accuracy (0.70) is achieved using the Random Forest classifier, this classifier is selected in order to predict the gender of the reviewers that we do not know their gender. The percentage of women and men in the whole dataset are presented in the pie chart below.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/95586847/183755367-cd894bdf-20f0-4b4c-936b-0b3340b1449e.png" width="300"></p>
+
+
 ### 5.2 Age Group
 
