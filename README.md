@@ -22,8 +22,7 @@ The code requires Python and Selenium.
 
 ## 1. About
 
-**Analysis of TripAdvisor Data** is a project that was created as a semester Project in the context of “Web Mining” class.
-MSc Data and Web Science, School of Informatics, Aristotle University of Thessaloniki.
+**Analysis of TripAdvisor Data** is a project that was created as a semester Project in the context of “Web Mining” class. MSc Data and Web Science, School of Informatics, Aristotle University of Thessaloniki.
 
 ## 2. Web Scraping Process
 
@@ -75,9 +74,7 @@ Visualize the monthly number of reviews:
 
 <p align="center"><img src="https://user-images.githubusercontent.com/95586847/180653719-ea37a8a2-03c2-48cf-852a-a72c1dd39e2a.png" width="500"></p>
 
-The month with the most reviews made is August with September trailing right behind. This is due to the tourism Thessaloniki gets late at summer.
-Despite the peak observed during summer, September and October, we can see that the
-number of monthly reviews remains the same during the rest of the months.
+The month with the most reviews made is August with September trailing right behind. This is due to the tourism Thessaloniki gets late at summer. Despite the peak observed during summer, September and October, we can see that the number of monthly reviews remains the same during the rest of the months.
 
 ### 3.3 Most Common Words, Bi-grams, Tri-grams
 The library "WordCloud" was used to visualize unigrams, bigrams and trigrams that occur frequently at 1-star and 5-star reviews.
@@ -97,13 +94,10 @@ The library "WordCloud" was used to visualize unigrams, bigrams and trigrams tha
   :-------------------------:|:-------------------------:
   ![image](https://user-images.githubusercontent.com/95586847/180654801-6c14bc94-01d9-44cf-aa1a-0da743b3d19f.png) |  ![image](https://user-images.githubusercontent.com/95586847/180654854-d6f4367a-6ed4-412d-985e-fb241caa2a47.png)
 
-It is obvious that the bigger the "n" gets, the better it describes the general feeling of a review.
-Unigrams are just common words, while some of the bigrams and most of the trigrams give a
-more complete view of the context. 
+It is obvious that the bigger the "n" gets, the better it describes the general feeling of a review. Unigrams are just common words, while some of the bigrams and most of the trigrams give a more complete view of the context. 
 
 ### 3.4 Fastest Growing and Fastest Shrinking Words
-Another interesting visualization would be to explore the fastest growing and shrinking words
-across the time.
+Another interesting visualization would be to explore the fastest growing and shrinking words across the time.
 For instance:
 "Vegan"            |  "Soutzoukakia"
 :-------------------------:|:-------------------------:
@@ -133,33 +127,48 @@ TextBlob library was used to get the sentiment polarity score of the reviews and
 
 
 ### 4.2 Polarity Score per Restaurant 
-We also calculate the polarity score for each restaurant based on its reviews in
-order to find the top-10 restaurants with positive and negative scores. Since these mean polarity scores may be misleading if a restaurant has very few reviews, we take into account only the restaurants that have more than 20 reviews.
+We also calculate the polarity score for each restaurant based on its reviews in order to find the top-10 restaurants with positive and negative scores. Since these mean polarity scores may be misleading if a restaurant has very few reviews, we take into account only the restaurants that have more than 20 reviews.
 
 "Best Restaurants"            |  "Worst Restaurants"
 :-------------------------:|:-------------------------:
 ![image](https://user-images.githubusercontent.com/95586847/183750652-a1476dd1-9473-4da4-ac78-aa962668441f.png) |  ![image](https://user-images.githubusercontent.com/95586847/183750670-74a331a1-fa26-4181-8612-a2bd0a7c5ab9.png)
 
 ## 5. User Profiling
-Next, we build Machine Learning models that predict the gender and the age
-group of the reviewer based on the review. More specifically, the features that will be used
-are the review text, the user review distribution, the rating and the polarity that was calculated
-in the previous section.
+Next, we build Machine Learning models that predict the gender and the age group of the reviewer based on the review. More specifically, the features that will be used are the review text, the user review distribution, the rating and the polarity that was calculated in the previous section.
 
 ### 5.1 Gender
 The percentage of women and men for the reviewers that we have this information in the dataset are presented in the following pie chart. We have information about the reviewer's gender in about one third of our dataset.
 
 <p align="center"><img src="https://user-images.githubusercontent.com/95586847/183751581-6b484d57-88a5-42f9-b658-c648cff18d2e.png" width="300"></p>
 
-We split our dataset into training and test set and we use a "Single Imputer" so as to complete the missing values using the mean along each column and a “ColumnTransformer” in order to convert each
-review to a vector of TF-IDF features. After that, in order to select the most appropriate classification algorithm, we further split the training data into training and validation sets. The results are presented below:
+We split our dataset into training and test set and we use a "Single Imputer" so as to complete the missing values using the mean along each column and a “ColumnTransformer” in order to convert each review to a vector of TF-IDF features. After that, in order to select the most appropriate classification algorithm, we further split the training data into training and validation sets. The results are presented below:
 
-<p align="center"><img src="https://user-images.githubusercontent.com/95586847/183754910-004f3aaa-31db-4179-a7dd-fdbda8757dff.png" width="300"></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/95586847/183754910-004f3aaa-31db-4179-a7dd-fdbda8757dff.png" width="350"></p>
 
 Since the largest accuracy (0.70) is achieved using the Random Forest classifier, this classifier is selected in order to predict the gender of the reviewers that we do not know their gender. The percentage of women and men in the whole dataset are presented in the pie chart below.
 
 <p align="center"><img src="https://user-images.githubusercontent.com/95586847/183755367-cd894bdf-20f0-4b4c-936b-0b3340b1449e.png" width="300"></p>
 
+We also present the most used words by men and women in the following wordclouds.
+"Men"            |  "Women"
+:-------------------------:|:-------------------------:
+![image](https://user-images.githubusercontent.com/95586847/183844705-b3143773-4a4d-465e-be56-600a07f487e9.png)  |  ![image](https://user-images.githubusercontent.com/95586847/183844738-8a548306-e152-4b31-9e5e-1e6fa5d6a173.png)
 
 ### 5.2 Age Group
+The percentage of each age group for the reviewers that we have this information in the dataset are presented in the following pie chart. We have information about the reviewer's age in about one third of our dataset.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/95586847/183845506-ac70b1fa-b435-4f57-ba7c-f6a3df9ab449.png" width="300"></p>
+
+The features that are used to create our model are the same as before. The results of the three classification algorithms that were tested are presented below.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/95586847/183846101-d7c5f0ad-bd6d-4293-b27e-1d672c606ec5.png" width="350"></p>
+
+In this case “Logistic Regression” yields the best results, although the accuracy is not large enough (0.47), yet larger than the accuracy of the random classifier (0.2). Thus, “Logistic Regression” is selected in order to predict the age group of the whole dataset. The percentage of each age group in the whole dataset is presented in the pie chart below:
+
+<p align="center"><img src="https://user-images.githubusercontent.com/95586847/183846314-3411e1c8-a326-4910-b863-c7e657acd131.png" width="300"></p>
+
+Finally, we create the boxplots of polarities of each age group.
+
+<p align="center"><img src="https://user-images.githubusercontent.com/95586847/183847300-73ddaf09-0afa-4319-ba10-288208c4ebdb.png" width="400"></p>
+
 
